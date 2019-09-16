@@ -891,9 +891,9 @@ function on_click_nominate_submit(){
 		url:path + 'admin/saveOrUpdateNominate.htm',
 		data:{
 			userId:$('#nominate_user_id').val(),
-			t_is_nominate:$('#t_is_nominate').val(),
-			t_sort:$('#t_sort').val(),
-			t_is_godness:$('#t_is_godness').val(),
+			t_is_nominate:(null==$('#t_is_nominate').val()||$('#t_is_nominate').val())==""?0:$('#t_is_nominate').val(),
+			t_sort:(null==$('#t_sort').val()||$('#t_sort').val())==""?0:$('#t_sort').val(),
+			t_is_godness:(null==$('#t_is_godness').val()||$('#t_is_godness').val())==""?0:$('#t_is_godness').val(),
 			},
 		dataType:'json',
 		success:function(data){

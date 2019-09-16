@@ -232,7 +232,7 @@ public class UserServiceImpl extends ICommServiceImpl implements UserService {
 			// 是否加入角色查询
 			if (t_role != -1) {
 				countSql = countSql + " AND t_role = " + t_role;
-				if (t_role != 2 && t_role != 3)
+				if (t_role != 2 && t_role != 3 && t_role != 4)
 					qSql.append(" AND u.t_role = ").append(t_role);
 				else if (t_role == 2)
 					qSql.append(" AND s.t_is_nominate = 1 ");
