@@ -208,7 +208,7 @@ public interface UserService {
 	 * @param t_is_nominate
 	 * @return
 	 */
-	public MessageUtil saveOrUpdateNominate(int userId,int t_is_nominate,int t_sort);
+	public MessageUtil saveOrUpdateNominate(int userId,int t_is_nominate,int t_sort,int t_is_godness);
 	
 	/**
 	 * 获取当前主播是否免费

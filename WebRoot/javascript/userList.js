@@ -155,7 +155,7 @@ function ajax_load_table(){
               				 res = res +'<a class="btn btn-default" href="javascript:on_click_setUp_charge('+row.t_id+')"; style="height: 25px;line-height: 0.5;background-color: #87CEFA;">收费设置</a>&nbsp;&nbsp;';
               				 res = res +'<a class="btn btn-default" href="javascript:show_lable_html('+row.t_id+')"; style="height: 25px;line-height: 0.5;background-color: #87CEFA;">标签</a>&nbsp;&nbsp;';
               				 res = res +'<a class="btn btn-default" href="javascript:on_show_criticism('+row.t_id+')"; style="height: 25px;line-height: 0.5;background-color: #87CEFA;">评价</a>&nbsp;&nbsp;';
-              				 res = res +'<a class="btn btn-default" href="javascript:on_click_show_nominate('+row.t_id+',\''+row.t_nickName+'\')"; style="height: 25px;line-height: 0.5;background-color: #87CEFA;">推荐</a>&nbsp;&nbsp;';
+              				 res = res +'<a class="btn btn-default" href="javascript:on_click_show_nominate('+row.t_id+',\''+row.t_nickName+'\')"; style="height: 25px;line-height: 0.5;background-color: #87CEFA;">推荐和女神</a>&nbsp;&nbsp;';
               				 res = res +'<a class="btn btn-default" href="javascript:on_click_show_freeAnchor('+row.t_id+',\''+row.t_nickName+'\')"; style="height: 25px;line-height: 0.5;background-color: #87CEFA;">免费</a>&nbsp;&nbsp;</br></br>';
               				 res = res +'<a class="btn btn-default" href="javascript:on_click_setOnLine('+row.t_id+')"; style="height: 25px;line-height: 0.5;background-color: #87CEFA;">'+(null == row.t_online_setup?'设为在线':0 == row.t_online_setup?'设为在线':'设为离线')+'</a>&nbsp;&nbsp;';
               			 }
@@ -876,8 +876,9 @@ function on_click_show_nominate(id,nickName){
 			if(data.m_istatus == 1){
 				$('#nominate_user_id').val(id);
 				$('#t_nick_name').val(nickName);
-				$('#t_is_nominate').val(null == data.m_object?0: data.m_object.t_id);
+				$('#t_is_nominate').val(null == data.m_object?0: data.m_object.t_is_nominate);
 				$('#t_sort').val(null == data.m_object?99: data.m_object.t_sort);
+				$('#t_is_godness').val(null == data.m_object?0: data.m_object.t_is_godness);
 				$('#nominateModal').modal('show');
 			}
 		}
@@ -891,7 +892,8 @@ function on_click_nominate_submit(){
 		data:{
 			userId:$('#nominate_user_id').val(),
 			t_is_nominate:$('#t_is_nominate').val(),
-			t_sort:$('#t_sort').val()
+			t_sort:$('#t_sort').val(),
+			t_is_godness:$('#t_is_godness').val(),
 			},
 		dataType:'json',
 		success:function(data){

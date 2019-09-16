@@ -14,16 +14,16 @@
     <!-- 微信提现加密文件 -->
     <entry key="cert">/secretkey/cert/apiclient_cert.p12</entry>
     <!-- 微信支付IP地址 -->
-    <entry key="spbill_create_ip">106.15.88.38</entry>
+    <entry key="spbill_create_ip">154.221.21.157</entry>
     <!-- 项目名称 -->
-    <entry key="projectName">demo</entry>
+    <entry key="projectName">chat</entry>
     <!-- 项目APP访问地址 -->
-    <entry key="project_url">http://app.1-liao.cn</entry>
+    <entry key="project_url">http://qqjy-app.qichier.top/chat_app</entry>
     <!-- 调用通知地址 -->
-    <entry key="noticeUrl">http://app.1-liao.cn/app/sendSocketNotice.do</entry>
+    <entry key="noticeUrl">http://qqjy-app.qichier.top/chat_app/app/sendSocketNotice.do</entry>
     <!-- 推送相关 -->
-    <entry key="app_key">40f7d4d87dd5a8397fc9af4a</entry>
-    <entry key="master_secret">2ee10b360f319b547be543c5</entry>
+    <entry key="app_key">330c313732c9d37f421c921c</entry>
+    <entry key="master_secret">9d6295a53c3ac3b24f2444a2</entry>
     
     <entry key="showapi_appid">50628</entry>
     

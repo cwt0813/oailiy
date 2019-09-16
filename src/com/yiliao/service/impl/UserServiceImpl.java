@@ -1561,15 +1561,17 @@ public class UserServiceImpl extends ICommServiceImpl implements UserService {
 	}
 
 	@Override
-	public MessageUtil saveOrUpdateNominate(int userId, int t_is_nominate,int t_sort) {
+	public MessageUtil saveOrUpdateNominate(int userId, int t_is_nominate,int t_sort,int t_is_godness) {
 		try {
 
 			//取消推荐
-			if(t_is_nominate == 0) {
+			if(t_is_nominate == 0 || t_is_godness == 0) {
 				String uSql = " DELETE FROM t_spread  WHERE t_user_id = ? ";
 				this.getFinalDao().getIEntitySQLDAO().executeSQL(uSql, userId);
 				
-			}else { //新增或者修改推荐值
+			}
+			
+			if(t_is_nominate == 1){ //新增或者修改推荐值
 				String qSql = " SELECT * FROM t_spread WHERE t_user_id = ? ";
 
 				List<Map<String, Object>> dataList = this.getFinalDao().getIEntitySQLDAO().findBySQLTOMap(qSql, userId);
@@ -1583,6 +1585,17 @@ public class UserServiceImpl extends ICommServiceImpl implements UserService {
 					String uSql="UPDATE t_spread SET  t_sort= ? WHERE t_user_id = ?;";
 					this.getFinalDao().getIEntitySQLDAO().executeSQL(uSql, t_sort,userId);
 				}
+			}else if(t_is_godness == 1){
+				String qSql = " SELECT * FROM t_spread WHERE t_user_id = ? ";
+
+				List<Map<String, Object>> dataList = this.getFinalDao().getIEntitySQLDAO().findBySQLTOMap(qSql, userId);
+
+				if (dataList.isEmpty()) {
+
+					String inSql = " INSERT INTO t_spread (t_user_id, t_is_godness) VALUES (?, ?); ";
+					this.getFinalDao().getIEntitySQLDAO().executeSQL(inSql, userId, t_is_godness);
+
+				} 
 			}
 			
 			mu = new MessageUtil(1, "操作成功!");

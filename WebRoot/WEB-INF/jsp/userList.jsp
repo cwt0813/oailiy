@@ -515,6 +515,24 @@
 								<p class="help-block" style="color: red;">*</p>
 							</div>
 						</div>
+						<br/>
+						<div style="height: 40px;">
+							<label class="col-md-2 control-label">是否女神:</label>
+							<div class="col-md-7">
+								<div class="input-group">
+									<span class="input-group-addon"> <i
+										class="glyphicon glyphicon-adjust"></i>
+									</span> 
+									<select id="t_is_godness"  class="form-control">
+										<option value="0">否</option>
+										<option value="1">是</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block" style="color: red;">*</p>
+							</div>
+						</div>
 					</div>
 					<br>
 					<div class="modal-footer">

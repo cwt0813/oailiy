@@ -432,16 +432,16 @@ public class UserControl {
 	
 	
 	/**
-	 * 设置或修改推荐主播
+	 * 设置或修改推荐主播和女神
 	 * @param userId
 	 * @param t_is_nominate
 	 * @param response
 	 */
 	@RequestMapping("saveOrUpdateNominate")
 	@ResponseBody
-	public void saveOrUpdateNominate(int userId,int t_is_nominate,int t_sort,HttpServletResponse response) {
+	public void saveOrUpdateNominate(int userId,int t_is_nominate,int t_sort,int t_is_godness,HttpServletResponse response) {
 		
-		MessageUtil mu = this.userService.saveOrUpdateNominate(userId, t_is_nominate,t_sort);
+		MessageUtil mu = this.userService.saveOrUpdateNominate(userId, t_is_nominate,t_sort,t_is_godness);
 		
 		PrintUtil.printWri(mu, response);
 	}
