@@ -238,6 +238,8 @@ public class UserServiceImpl extends ICommServiceImpl implements UserService {
 					qSql.append(" AND s.t_is_nominate = 1 ");
 				else if (t_role == 3)
 					qSql.append(" AND f.t_id is not null");
+				else if (t_role == 4)
+					qSql.append(" AND s.t_is_godness = 1");
 			}
 			// 判断查询条件是否存在
 			if (null != condition && !condition.isEmpty()) {

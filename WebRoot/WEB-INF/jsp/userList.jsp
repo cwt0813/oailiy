@@ -43,6 +43,7 @@
 	                      <option value="0">所有用户</option>
 	                      <option value="1">所有主播</option>
 	                      <option value="2">推荐主播</option>
+	                      <option value="4">女神主播</option>
 	                      <option value="3">免费主播</option>
 					</select>
 					<button class="btn btn-default" style="float: left;">条件:</button>
