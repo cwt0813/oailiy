@@ -286,7 +286,7 @@
 		<dependency>
             <groupId>com.qcloud</groupId>
             <artifactId>cos_api</artifactId>
-            <version>5.4.4</version>
+            <version>5.6.7</version>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
