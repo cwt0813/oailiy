@@ -43,7 +43,7 @@ public class CoverExamineServiceImpl extends ICommServiceImpl implements
 			}
 			
 			sb.append("GROUP BY u.t_id ");
-			sb.append("order BY c.t_update_time desc");
+			sb.append("order BY c.t_update_time desc ");
 			sb.append("LIMIT ?,5");
 
 			List<Map<String, Object>> dataList = this.getFinalDao()
