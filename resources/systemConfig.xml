@@ -18,9 +18,9 @@
     <!-- 项目名称 -->
     <entry key="projectName">chat</entry>
     <!-- 项目APP访问地址 -->
-    <entry key="project_url">http://qqjy-app.qichier.top/chat_app</entry>
+    <entry key="project_url">http://xqr-app.fanxingtuan.top/chat_app</entry>
     <!-- 调用通知地址 -->
-    <entry key="noticeUrl">http://qqjy-app.qichier.top/chat_app/app/sendSocketNotice.do</entry>
+    <entry key="noticeUrl">http://xqr-app.fanxingtuan.top/chat_app/app/sendSocketNotice.do</entry>
     <!-- 推送相关 -->
     <entry key="app_key">24311cf61a96fd49e25c2d2a</entry>
     <entry key="master_secret">305c54e3d40bd23753752f28</entry>
