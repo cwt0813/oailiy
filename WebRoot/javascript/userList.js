@@ -171,9 +171,9 @@ function ajax_load_table(){
               					res = res +'<a href="javascript:on_click_operation('+row.t_id+',2)" class="btn btn-default" style="height: 25px;line-height: 0.5;color:red;background-color: #87CEFA;">禁用</a>&nbsp;&nbsp;';
               			}
               			//赠送金币弹窗
-              			if(row.t_role == 0){
+//              			if(row.t_role == 0){
               				res = res + '<a href="javascript:on_click_give_modal('+nickName+','+row.t_id+');" class="btn btn-default" style="height: 25px;line-height: 0.5;background-color: #87CEFA;">赠送金币</a>&nbsp;&nbsp;';
-              			}
+//              			}
               			if(row.t_disable ==2){
               				res = res +'<a href="javascript:on_click_operation('+row.t_id+',0)" class="btn btn-default" style="height: 25px;line-height: 0.5;background-color: #87CEFA;">启用</a>&nbsp;&nbsp;';
               					res = res +'<a href="javascript:on_click_open_update_model('+row.t_id+','+nickName+' );" class="btn btn-default" style="height: 25px;line-height: 0.5;background-color: #87CEFA;">封号</a>&nbsp;&nbsp;';
