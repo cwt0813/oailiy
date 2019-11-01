@@ -44,11 +44,11 @@ public class CoverExamineServiceImpl extends ICommServiceImpl implements
 			
 			sb.append("GROUP BY u.t_id ");
 			sb.append("order BY c.t_update_time desc ");
-			sb.append("LIMIT ?,5");
+			sb.append("LIMIT ?,10");
 
 			List<Map<String, Object>> dataList = this.getFinalDao()
 					.getIEntitySQLDAO()
-					.findBySQLTOMap(sb.toString(), (page - 1) * 5);
+					.findBySQLTOMap(sb.toString(), (page - 1) * 10);
 
 			for (Map<String, Object> m : dataList) {
 				
